@@ -1,4 +1,5 @@
 import { createCallerFactory, createTRPCRouter } from "~/server/api/trpc";
+import { radarRouter } from "./routers/radar";
 
 /**
  * This is the primary router for your server.
@@ -6,6 +7,7 @@ import { createCallerFactory, createTRPCRouter } from "~/server/api/trpc";
  * All routers added in /api/routers should be manually added here.
  */
 export const appRouter = createTRPCRouter({
+  radar: radarRouter,
 });
 
 // export type definition of API
